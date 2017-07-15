@@ -1,0 +1,20 @@
+# language: es
+Característica: Loguearse y realizar la búsqueda de algún contacto de tu red y visualizar su perfil.
+Esquema del escenario 1: Logearse con usuario registrado
+Dado: que estoy en https://www.linkedin.com/
+Cuando: ingreso el usuario: 'jhonpaez27@gmail.com' 
+Y contraseña: 'prueba1234'
+Y presiono el boton 'Iniciar sesion'
+Entonces: ingreso exitoso al sitio
+
+Esquema del escenario 2: Buscar contacto
+Dado: que estoy en https://www.linkedin.com/feed/ 
+Cuando: ingreso en el panel de busqueda el nombre 'Ramir'
+Y presiono el boton para: 'Busqueda'
+Entonces: ingresa a la sección del resultado de busqueda
+
+Esquema del escenario 3: Seleccionar contacto y mostrar su perfil
+Dado: que estoy en https://www.linkedin.com/search/results/index/?keywords=ramir&origin=GLOBAL_SEARCH_HEADER
+Cuando: presiono el contacto buscado 'Ramir Hernández'
+Entoces: ingresa al perfil de la persona buscada 
+Y finaliza la prueba

@@ -1,0 +1,9 @@
+# language: es
+Característica: Loguearse con un usuario no registrado.
+Esquema del escenario: Logearse con usuario no registrado
+Dado: que estoy en https://www.linkedin.com/
+Cuando: ingreso el usuario: 'abcd@gmail.com' 
+Y contraseña: 'prueba1234'
+Y presiono el boton 'Iniciar sesion'
+Entonces: redirecciona a la pagina de error donde indica que ha ocurrido un error en el envio de datos
+Y finaliza la prueba
